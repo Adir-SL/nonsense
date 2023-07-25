@@ -4,8 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Non sense</title>
+
+    <style>
+        body{
+            font-family: sans-serif;
+        }
+        ul{
+            border: 1px solid lightgray;
+            width: 200px;
+            padding: 16px;
+            border-radius: 8px;
+            position: relative;
+            overflow: visible;
+            list-style: none;
+        }
+        ul li{
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            position: relative;
+        }
+        ul li:hover{
+            overflow: visible;
+        }
+        ul li:hover{
+            content: attr(tooltip);
+            position: static;
+            width: fit-content;
+            background-color: white;
+            top: 0;
+            left: 0;
+        }
+    </style>
 </head>
 <body>
-    
+    <ul>
+        <li tooltip="very short item">very short item</li>
+        <li tooltip="Very very long long long long long long item">Very very long long long long long long item</li>
+    </ul>
 </body>
 </html>
